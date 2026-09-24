@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://prestooran.vercel.app'),
   title: 'PRESTO — Retouche, Couture & Repassage à Oran',
   description: 'PRESTO Oran : retouches express 24h, costumes sur mesure, repassage soigné. Centre-Ville 0661 200 829 · Akid-Lotfi 0661 597 598.',
+  alternates: { canonical: '/' },
+  openGraph: { url: 'https://prestooran.vercel.app', siteName: 'PRESTO Oran' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
