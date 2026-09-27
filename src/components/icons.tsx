@@ -1,13 +1,20 @@
-export const MenuIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>);
-export const CloseIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12" /></svg>);
-export const BagIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 7h15l1.5 13.5a1 1 0 0 1-1 1.1H6.5a1 1 0 0 1-1-1.1L6 7Z" /><path d="M9 10V6a3 3 0 0 1 6 0v4" /></svg>);
-export const HeartIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3.4 1-4.5 2.5C10.9 4 9.3 3 7.5 3A5.5 5.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7 7-7Z" /></svg>);
-export const SearchIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>);
-export const UserIcon = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" /></svg>);
-export const ArrowIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>);
-export const StarIcon = ({ cls = '' }: { cls?: string }) => (<svg viewBox="0 0 24 24" className={cls} width="14" height="14" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z" /></svg>);
-export const ChevronLeftIcon = ({ size = 18 }: { size?: number }) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18 9 12l6-6" /></svg>);
-export const ChevronRightIcon = ({ size = 18 }: { size?: number }) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18 15 12l-6-6" /></svg>);
-export const BellIcon = ({ size = 18 }: { size?: number }) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>);
-export const MoonIcon = ({ size = 18 }: { size?: number }) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>);
-export const SunIcon = ({ size = 18 }: { size?: number }) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>);
+'use client';
+import { Menu, X, ShoppingBag, Heart, Search, User, ArrowRight, Star, ChevronLeft, ChevronRight, Bell, Moon, Sun } from 'lucide-react';
+
+type P = { size?: number; cls?: string; className?: string };
+
+const c = (cls?: string, className?: string) => [cls, className].filter(Boolean).join(' ');
+
+export const MenuIcon = ({ size = 18, cls = '', className = '' }: P) => <Menu size={size} className={c(cls, className)} />;
+export const CloseIcon = ({ size = 18, cls = '', className = '' }: P) => <X size={size} className={c(cls, className)} />;
+export const BagIcon = ({ size = 18, cls = '', className = '' }: P) => <ShoppingBag size={size} className={c(cls, className)} />;
+export const HeartIcon = ({ size = 18, cls = '', className = '' }: P) => <Heart size={size} className={c(cls, className)} />;
+export const SearchIcon = ({ size = 18, cls = '', className = '' }: P) => <Search size={size} className={c(cls, className)} />;
+export const UserIcon = ({ size = 18, cls = '', className = '' }: P) => <User size={size} className={c(cls, className)} />;
+export const ArrowIcon = ({ size = 16, cls = '', className = '' }: P) => <ArrowRight size={size} className={c(cls, className)} />;
+export const StarIcon = ({ cls = '', className = '', size = 14 }: P) => <Star size={size} className={c(cls, className)} fill="currentColor" />;
+export const ChevronLeftIcon = ({ size = 18, cls = '', className = '' }: P) => <ChevronLeft size={size} className={c(cls, className)} />;
+export const ChevronRightIcon = ({ size = 18, cls = '', className = '' }: P) => <ChevronRight size={size} className={c(cls, className)} />;
+export const BellIcon = ({ size = 18, cls = '', className = '' }: P) => <Bell size={size} className={c(cls, className)} />;
+export const MoonIcon = ({ size = 18, cls = '', className = '' }: P) => <Moon size={size} className={c(cls, className)} />;
+export const SunIcon = ({ size = 18, cls = '', className = '' }: P) => <Sun size={size} className={c(cls, className)} />;
