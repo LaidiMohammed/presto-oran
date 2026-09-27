@@ -17,7 +17,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <div className="mt-20 grid gap-5 md:grid-cols-3">
         {related.map((r) => (
           <Link key={r.id} href={`/product/${r.id}`} className="group overflow-hidden rounded-2xl border border-white/10 bg-noir-900 transition hover:border-gold-500/40">
-            <div className="relative aspect-[16/11]"><Image src={r.image} alt={r.fr} fill sizes="33vw" className="object-cover transition duration-1000 group-hover:scale-110" /></div>
+            <div className="relative aspect-[16/11]"><Image src={r.image} alt={r.fr} fill sizes="33vw" className="object-cover transition duration-1000 group-hover:scale-110" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div></div>
             <div className="flex items-center justify-between gap-3 p-5"><div><p className="font-display text-xl">{r.fr}</p><p className="text-sm text-smoke">{r.ar}</p></div><p className="font-bold text-gold-300">{money(r.price)}</p></div>
           </Link>
         ))}

@@ -14,10 +14,11 @@ export default function TarifsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center gap-4">
-        <div><h2 className="font-display text-3xl">Tarifs & Services <span className="text-gold-300">✎</span></h2>
-        <p className="text-sm text-smoke">Prix démo en DA — chaque modification s’affiche <b className="text-gold-300">instantanément</b> sur le site (Accueil + page Services).</p></div>
-        <button onClick={resetServices} className="ms-auto rounded-xl border border-white/15 px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:border-gold-400">Réinitialiser démo</button>
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div><p className="text-[11px] font-bold uppercase tracking-[0.3em] text-gold-400">{services.length} services · synchro live</p>
+          <h2 className="mt-1 font-display text-3xl sm:text-4xl">Tarifs & Services <span className="text-gold-300">✎</span></h2>
+        <p className="mt-1 text-sm text-smoke">Chaque modification s’affiche <b className="text-gold-300">instantanément</b> sur le site (Accueil + Services).</p></div>
+        <button onClick={resetServices} className="rounded-xl border border-white/15 px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:border-gold-400">Réinitialiser</button>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">
@@ -28,9 +29,9 @@ export default function TarifsPage() {
 
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#141417]">
         <div className="overflow-x-auto"><table className="w-full min-w-[720px] text-left text-sm">
-          <thead><tr className="border-b border-white/10 text-[10px] uppercase tracking-[0.25em] text-smoke"><th className="px-6 py-4">Service</th><th className="px-6 py-4">Arabe</th><th className="px-6 py-4">Délai</th><th className="px-6 py-4">Prix (DA)</th><th className="px-6 py-4">Actions</th></tr></thead>
+          <thead><tr className="border-b border-white/10 bg-white/[0.02] text-[10px] uppercase tracking-[0.25em] text-smoke"><th className="px-6 py-4">Service</th><th className="px-6 py-4">Arabe</th><th className="px-6 py-4">Délai</th><th className="px-6 py-4">Prix (DA)</th><th className="px-6 py-4">Actions</th></tr></thead>
           <tbody>{services.map((s) => (
-            <tr key={s.id} className="border-b border-white/5 transition hover:bg-white/[0.02]">
+            <tr key={s.id} className="border-b border-white/5 transition hover:bg-white/[0.03]">
               <td className="px-6 py-4 font-bold">{s.fr}</td>
               <td className="px-6 py-4 text-cream/70" dir="rtl">{s.ar}</td>
               <td className="px-6 py-4 text-smoke">{s.duration}</td>
@@ -50,8 +51,9 @@ export default function TarifsPage() {
           ))}</tbody></table></div>
       </div>
 
-      <div className="rounded-2xl border border-gold-500/30 bg-gold-500/[0.04] p-6">
-        <h3 className="font-display text-2xl">+ Ajouter un service (démo)</h3>
+      <div className="rounded-2xl border border-gold-500/30 bg-gradient-to-b from-gold-500/[0.08] to-transparent p-6">
+        <h3 className="font-display text-2xl">+ Ajouter un service</h3>
+        <p className="mt-1 text-sm text-smoke">Visible immédiatement sur <span className="text-gold-300">/services</span> et l’accueil.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           <input value={nfr} onChange={(e) => setNfr(e.target.value)} placeholder="Nom FR (ex : Ourlet rideau)" className="input-luxe" />
           <input value={nar} onChange={(e) => setNar(e.target.value)} placeholder="Nom AR" className="input-luxe" dir="rtl" />

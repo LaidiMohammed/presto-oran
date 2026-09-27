@@ -1,19 +1,23 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
-/** PRESTO roundel: uses /logo-presto.png when the owner drops it in /public, else crafted SVG fallback */
+/** PRESTO roundel: uses /logo.png (your upload in /public) else SVG fallback */
 export function Logo({ size = 44 }: { size?: number }) {
   const [png, setPng] = useState(true);
   return (
     <span className="flex items-center gap-3">
       {png ? (
-        <img
-          src="/logo-presto.png"
-          alt="PRESTO"
+        <Image
+          src="/logo.png"
+          alt="PRESTO — machine à coudre"
           width={size}
           height={size}
           onError={() => setPng(false)}
-          className="rounded-full bg-cream object-cover ring-1 ring-gold-500/60"
+          className="shrink-0 rounded-full bg-white object-contain ring-1 ring-gold-500/60"
+          style={{ width: size, height: size }}
+          priority
+          unoptimized
         />
       ) : (
         <span

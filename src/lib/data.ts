@@ -50,11 +50,13 @@ export const ORAN = {
 };
 
 export const SHOP = {
-  hero: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1920&auto=format&fit=crop',
-  atelier: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1920&auto=format&fit=crop',
-  rack: 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1920&auto=format&fit=crop',
-  cta: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1920&auto=format&fit=crop',
-  tailor: 'https://images.unsplash.com/photo-1593032465175-84a2a3c1aaa7?q=80&w=1200&auto=format&fit=crop'
+  // HOME — one real PRESTO boutique photo everywhere
+  hero: '/prest.png',
+  atelier: '/prest.png',
+  rack: '/prest.png',
+  cta: '/prest.png',
+  tailor: '/prest.png',
+  fallback: '/prest.png'
 };
 
 export const VIDEOS = {
@@ -64,35 +66,34 @@ export const VIDEOS = {
   runway: 'https://videos.pexels.com/video-files/7677253/7677253-hd_1920_1080_25fps.mp4'
 };
 
-const SEW = 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=900&auto=format&fit=crop';
-
 export const SERVICES: Service[] = [
   { id: 'ourlet-pantalon', fr: 'Ourlet pantalon', ar: 'تقصير السروال', price: 400, duration: '24h', image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=900&auto=format&fit=crop' },
-  { id: 'fermeture-eclair', fr: 'Fermeture éclair', ar: 'سحّاب', price: 800, duration: '24–48h', image: SEW },
+  { id: 'fermeture-eclair', fr: 'Fermeture éclair', ar: 'سحّاب', price: 800, duration: '24–48h', image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=900&auto=format&fit=crop' },
   { id: 'retouche-taille', fr: 'Retouche taille', ar: 'تعديل الخصر', price: 600, duration: '24h', image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop' },
-  { id: 'veste-ajust', fr: 'Ajustement veste / costume', ar: 'تعديل السترة', price: 1500, duration: '48h', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=900&auto=format&fit=crop' },
-  { id: 'robe-soiree', fr: 'Retouche robe de soirée', ar: 'تعديل فستان سهرة', price: 1200, duration: '48h', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop' },
+  { id: 'veste-ajust', fr: 'Ajustement veste / costume', ar: 'تعديل السترة', price: 1500, duration: '48h', image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=900&auto=format&fit=crop' },
+  { id: 'robe-soiree', fr: 'Retouche robe de soirée', ar: 'تعديل فستان سهرة', price: 1200, duration: '48h', image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=900&auto=format&fit=crop' },
   { id: 'repassage-costume', fr: 'Repassage costume complet', ar: 'كيّ بدلة كاملة', price: 500, duration: 'Jour même', image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop' },
-  { id: 'repassage-chemise', fr: 'Repassage chemise', ar: 'كيّ قميص', price: 200, duration: 'Jour même', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=900&auto=format&fit=crop' },
+  { id: 'repassage-chemise', fr: 'Repassage chemise', ar: 'كيّ قميص', price: 200, duration: 'Jour même', image: 'https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=900&auto=format&fit=crop' },
   { id: 'chemise-mesure', fr: 'Chemise sur mesure', ar: 'قميص حسب المقاس', price: 4500, duration: '7 jours', image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=900&auto=format&fit=crop' },
-  { id: 'costume-mesure', fr: 'Costume sur mesure', ar: 'بدلة حسب المقاس', price: 24000, duration: '14 jours', image: 'https://images.unsplash.com/photo-1594938374182-a56908d3f4ee?q=80&w=900&auto=format&fit=crop' },
-  { id: 'broderie', fr: 'Broderie initiales', ar: 'تطريز الأحرف', price: 600, duration: '48h', image: SEW }
+  { id: 'costume-mesure', fr: 'Costume sur mesure', ar: 'بدلة حسب المقاس', price: 24000, duration: '14 jours', image: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=900&auto=format&fit=crop' },
+  { id: 'broderie', fr: 'Broderie initiales', ar: 'تطريز الأحرف', price: 600, duration: '48h', image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop' }
 ];
 
 export const PRODUCTS: Product[] = [
-  { id: 'costume-presto', fr: 'Costume Prestige', ar: 'بدلة برستيج', categoryFr: 'Sur mesure', categoryAr: 'حسب المقاس', price: 24500, oldPrice: 28000, rating: 4.9, reviews: 86, image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=900&auto=format&fit=crop', tag: 'Signature', colors: ['#0a0a0b', '#2a2a3a'], descFr: 'Costume deux-pièces coupé à Oran, toile demi-mesure, finitions main.', descAr: 'بدلة من خياطة وهران، تشطيبات يدوية.' },
-  { id: 'robe-soiree-nuit', fr: 'Robe de soirée Nuit d’Oran', ar: 'فستان سهرة ليل وهران', categoryFr: 'Couture', categoryAr: 'خياطة', price: 15900, rating: 4.8, reviews: 64, image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop', tag: 'Nouveau', colors: ['#0a0a0b', '#c9a24b'], descFr: 'Satin drapé main, corsage structuré, pièce numérotée.', descAr: 'ساتان مطوي يدوياً، قطعة مرقّمة.' },
-  { id: 'qamis-brodi', fr: 'Qamis brodé', ar: 'قميص مطرّز', categoryFr: 'Traditionnel', categoryAr: 'تقليدي', price: 6800, rating: 4.9, reviews: 112, image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=900&auto=format&fit=crop', colors: ['#f5f0e8', '#0a0a0b'], descFr: 'Qamis coton premium, broderie col et poignets.', descAr: 'قميص قطن فاخر بتطريز.' },
-  { id: 'chemise-blanche', fr: 'Chemise blanche Oran', ar: 'قميص أبيض', categoryFr: 'Sur mesure', categoryAr: 'حسب المقاس', price: 4500, oldPrice: 5200, rating: 4.7, reviews: 58, image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=900&auto=format&fit=crop', tag: '-13%', colors: ['#f5f0e8'], descFr: 'Popeline double retors, col coupe italienne.', descAr: 'قطن ممتاز، ياقة إيطالية.' },
-  { id: 'tissu-premium', fr: 'Tissu premium (mètre)', ar: 'قماش فاخر (للمتر)', categoryFr: 'Tissus', categoryAr: 'أقمشة', price: 1800, rating: 4.8, reviews: 143, image: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=900&auto=format&fit=crop', colors: ['#1a2a5b', '#5b1a1a', '#0a0a0b'], descFr: 'Lainage italien et soieries au mètre, conseils offerts.', descAr: 'أقمشة إيطالية بالمتر مع استشارة.' },
-  { id: 'foulard-soie', fr: 'Foulard soie', ar: 'وشاح حريري', categoryFr: 'Accessoires', categoryAr: 'إكسسوارات', price: 2400, rating: 4.9, reviews: 97, image: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=900&auto=format&fit=crop', colors: ['#1a2a5b', '#c9a24b'], descFr: 'Soie de mûrier 90cm, roulottage main.', descAr: 'حرير طبيعي 90 سم.' },
-  { id: 'jupe-plissee', fr: 'Jupe plissée soleil', ar: 'تنورة بكسرات', categoryFr: 'Couture', categoryAr: 'خياطة', price: 5900, rating: 4.7, reviews: 41, image: 'https://images.unsplash.com/photo-1583496661160-fb5886a13d44?q=80&w=900&auto=format&fit=crop', colors: ['#0a0a0b', '#3b2a1a'], descFr: 'Plissé main, taille élastiquée invisible.', descAr: 'كسرات يدوية.' },
-  { id: 'ensemble-enfant', fr: 'Ensemble enfant Aid', ar: 'لباس أطفال للعيد', categoryFr: 'Enfants', categoryAr: 'أطفال', price: 3900, rating: 5.0, reviews: 73, image: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=900&auto=format&fit=crop', tag: 'Aid', colors: ['#f5f0e8', '#1a2a5b'], descFr: 'Ensemble 3 pièces pour enfants, du 2 au 12 ans.', descAr: 'طقم 3 قطع للأطفال.' }
+  // Add real photos to public/products/{id}.jpg
+  { id: 'costume-presto', fr: 'Costume Prestige', ar: 'بدلة برستيج', categoryFr: 'Sur mesure', categoryAr: 'حسب المقاس', price: 24500, oldPrice: 28000, rating: 4.9, reviews: 86, image: '/products/costume-presto.jpg', tag: 'Signature', colors: ['#0a0a0b', '#2a2a3a'], descFr: 'Costume deux-pièces coupé à Oran, toile demi-mesure, finitions main.', descAr: 'بدلة من خياطة وهران، تشطيبات يدوية.' },
+  { id: 'robe-soiree-nuit', fr: 'Robe de soirée Nuit d’Oran', ar: 'فستان سهرة ليل وهران', categoryFr: 'Couture', categoryAr: 'خياطة', price: 15900, rating: 4.8, reviews: 64, image: '/products/robe-soiree-nuit.jpg', tag: 'Nouveau', colors: ['#0a0a0b', '#c9a24b'], descFr: 'Satin drapé main, corsage structuré, pièce numérotée.', descAr: 'ساتان مطوي يدوياً، قطعة مرقّمة.' },
+  { id: 'qamis-brodi', fr: 'Qamis brodé', ar: 'قميص مطرّز', categoryFr: 'Traditionnel', categoryAr: 'تقليدي', price: 6800, rating: 4.9, reviews: 112, image: '/products/qamis-brodi.jpg', colors: ['#f5f0e8', '#0a0a0b'], descFr: 'Qamis coton premium, broderie col et poignets.', descAr: 'قميص قطن فاخر بتطريز.' },
+  { id: 'chemise-blanche', fr: 'Chemise blanche Oran', ar: 'قميص أبيض', categoryFr: 'Sur mesure', categoryAr: 'حسب المقاس', price: 4500, oldPrice: 5200, rating: 4.7, reviews: 58, image: '/products/chemise-blanche.jpg', tag: '-13%', colors: ['#f5f0e8'], descFr: 'Popeline double retors, col coupe italienne.', descAr: 'قطن ممتاز، ياقة إيطالية.' },
+  { id: 'tissu-premium', fr: 'Tissu premium (mètre)', ar: 'قماش فاخر (للمتر)', categoryFr: 'Tissus', categoryAr: 'أقمشة', price: 1800, rating: 4.8, reviews: 143, image: '/products/tissu-premium.jpg', colors: ['#1a2a5b', '#5b1a1a', '#0a0a0b'], descFr: 'Lainage italien et soieries au mètre, conseils offerts.', descAr: 'أقمشة إيطالية بالمتر مع استشارة.' },
+  { id: 'foulard-soie', fr: 'Foulard soie', ar: 'وشاح حريري', categoryFr: 'Accessoires', categoryAr: 'إكسسوارات', price: 2400, rating: 4.9, reviews: 97, image: '/products/foulard-soie.jpg', colors: ['#1a2a5b', '#c9a24b'], descFr: 'Soie de mûrier 90cm, roulottage main.', descAr: 'حرير طبيعي 90 سم.' },
+  { id: 'jupe-plissee', fr: 'Jupe plissée soleil', ar: 'تنورة بكسرات', categoryFr: 'Couture', categoryAr: 'خياطة', price: 5900, rating: 4.7, reviews: 41, image: '/products/jupe-plissee.jpg', colors: ['#0a0a0b', '#3b2a1a'], descFr: 'Plissé main, taille élastiquée invisible.', descAr: 'كسرات يدوية.' },
+  { id: 'ensemble-enfant', fr: 'Ensemble enfant Aid', ar: 'لباس أطفال للعيد', categoryFr: 'Enfants', categoryAr: 'أطفال', price: 3900, rating: 5.0, reviews: 73, image: '/products/ensemble-enfant.jpg', tag: 'Aid', colors: ['#f5f0e8', '#1a2a5b'], descFr: 'Ensemble 3 pièces pour enfants, du 2 au 12 ans.', descAr: 'طقم 3 قطع للأطفال.' }
 ];
 
 export const COLLECTIONS = [
   { slug: 'retouche', fr: 'Retouche Express', ar: 'تعديل سريع', pieces: 12, image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?q=80&w=1200&auto=format&fit=crop', descFr: 'Ourlets, fermetures, ajustements en 24h', descAr: 'تقصير وتعديلات خلال 24 ساعة' },
-  { slug: 'mesure', fr: 'Sur Mesure', ar: 'حسب المقاس', pieces: 18, image: 'https://images.unsplash.com/photo-1594938374182-a56908d3f4ee?q=80&w=1200&auto=format&fit=crop', descFr: 'Costumes, chemises et robes uniques', descAr: 'بدلات وقمصان وفساتين فريدة' },
+  { slug: 'mesure', fr: 'Sur Mesure', ar: 'حسب المقاس', pieces: 18, image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1200&auto=format&fit=crop', descFr: 'Costumes, chemises et robes uniques', descAr: 'بدلات وقمصان وفساتين فريدة' },
   { slug: 'repassage', fr: 'Repassage & Soin', ar: 'الكيّ والعناية', pieces: 8, image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop', descFr: 'Pressing délicat, jour même', descAr: 'كيّ دقيق في نفس اليوم' },
   { slug: 'boutique', fr: 'Boutique', ar: 'المتجر', pieces: 16, image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop', descFr: 'Articles et tissus disponibles', descAr: 'منتجات وأقمشة متوفرة' }
 ];

@@ -15,11 +15,10 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* HERO — Vêtement shop (boutique luxe) + floating atelier pip */}
-      <section className="relative flex min-h-[72vh] items-end overflow-hidden sm:min-h-[86vh] lg:min-h-[94vh]">
-        <Image src={SHOP.hero} alt="Boutique vêtements PRESTO Oran" fill priority sizes="100vw" className="animate-kenburns object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/55 to-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-noir-950/85 via-noir-950/30 to-transparent" />
+      {/* HERO — kept perfect background */}
+      <section className="relative flex min-h-[72vh] items-end overflow-hidden sm:min-h-[86vh] lg:min-h-[94vh] bg-noir-950">
+        <Image src={SHOP.hero} alt="Boutique PRESTO Oran" fill priority sizes="100vw" className="animate-kenburns object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div className="container-luxe relative z-10 grid items-end gap-8 pb-10 pt-28 sm:gap-10 sm:pb-16 sm:pt-36 lg:grid-cols-[1.5fr_1fr] lg:pb-20 lg:pt-40">
           <div>
             <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="eyebrow">— {t('hero.eyebrow')} —</motion.p>
@@ -41,12 +40,9 @@ export default function HomePage() {
           </div>
           <motion.div initial={{ opacity: 0, x: ar ? -40 : 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.7, duration: 1 }} className="hidden lg:block">
             <div className="glass relative overflow-hidden rounded-3xl p-2">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-                <Image src={SHOP.tailor} alt="Atelier PRESTO" fill sizes="30vw" className="object-cover" />
-                <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" poster={SHOP.tailor}>
-                  <source src={VIDEOS.atelier} type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-noir-900">
+                <Image src={SHOP.tailor} alt="Intérieur boutique PRESTO Oran - réel" fill sizes="30vw" className="object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-5">
                   <p className="font-display text-2xl italic text-gold-300">Atelier PRESTO ✦</p>
                   <p className="text-xs uppercase tracking-[0.25em] text-cream/70">{INFO.addr1} · {INFO.addr2}</p>
@@ -77,7 +73,7 @@ export default function HomePage() {
               <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-noir-900 transition-all duration-500 hover:-translate-y-2 hover:border-gold-500/40">
                 <div className="relative h-44 overflow-hidden sm:h-52">
                   <Image src={s.image} alt={pick(lang, s.fr, s.ar)} fill sizes="(max-width:640px) 100vw, 33vw" className="object-cover transition-transform duration-[1.2s] group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-noir-900 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <span className="absolute end-3 top-3 rounded-full bg-gold-500 px-3 py-1 text-xs font-extrabold text-black shadow-lg sm:end-4 sm:px-4 sm:py-1.5 sm:text-sm">{money(s.price)}</span>
                 </div>
                 <div className="flex items-center justify-between gap-3 p-4 sm:p-5">
@@ -92,10 +88,10 @@ export default function HomePage() {
         <Reveal className="mt-8 text-center sm:mt-10"><Link href="/services" className="btn-gold w-full justify-center sm:w-auto">{t('hero.cta1')} <ArrowIcon /></Link></Reveal>
       </section>
 
-      {/* ATELIER BAND — Vêtement workshop */}
-      <section className="relative overflow-hidden">
-        <Image src={SHOP.atelier} alt="Atelier couture PRESTO" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-noir-950/70" />
+      {/* ATELIER BAND — REAL prest.png */}
+      <section className="relative overflow-hidden bg-noir-950">
+        <Image src={SHOP.atelier} alt="Atelier couture PRESTO Oran - réel" fill sizes="100vw" className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div className="container-luxe relative z-10 grid items-center gap-8 py-16 sm:gap-12 sm:py-24 lg:grid-cols-2 lg:py-28">
           <Reveal>
             <p className="eyebrow">— {t('sec.craftEyebrow')} · Oran —</p>
@@ -221,10 +217,9 @@ export default function HomePage() {
       {/* CTA — Boutique rack */}
       <section className="container-luxe py-14 sm:py-20 lg:py-24">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl">
-            <Image src={SHOP.cta} alt="Collection vêtements PRESTO" fill sizes="100vw" className="object-cover" />
-            <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" poster={SHOP.cta}><source src={VIDEOS.campaign} type="video/mp4" /></video>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/55 to-transparent" />
+          <div className="relative overflow-hidden rounded-3xl bg-noir-900">
+            <Image src={SHOP.cta} alt="Collection PRESTO Oran - boutique réelle" fill sizes="100vw" className="object-cover object-center" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <div className="relative z-10 max-w-xl p-6 sm:p-10 lg:p-16">
               <p className="eyebrow">— PRESTO · Oran —</p>
               <h2 className="h-display mt-3 text-3xl sm:mt-4 sm:text-6xl">{ar ? 'ملابسكم تستحق ' : 'Vos vêtements méritent '} <span className="gold-text italic">{ar ? 'الأفضل.' : 'mieux.'}</span></h2>

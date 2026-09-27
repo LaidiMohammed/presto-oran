@@ -26,6 +26,7 @@ export function ProductCard({ p, index = 0, variant = 'standard' }: { p: Product
       >
         <Link href={`/product/${p.id}`} className="relative block min-h-[220px] overflow-hidden sm:min-h-[260px]">
           <Image src={p.image} alt={name} fill sizes="40vw" className="object-cover transition-transform duration-[1.2s] group-hover:scale-108 group-hover:scale-110" />
+          <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
           {p.tag && <span className="absolute start-4 top-4 bg-gold-500 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em] text-black">{p.tag}</span>}
         </Link>
         <div className="flex flex-col justify-center p-5 sm:p-9">
@@ -56,7 +57,7 @@ export function ProductCard({ p, index = 0, variant = 'standard' }: { p: Product
     >
       <Link href={`/product/${p.id}`} className={`relative block overflow-hidden ${aspect}`}>
         <Image src={p.image} alt={name} fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         {p.tag && <span className="absolute start-3 top-3 bg-gold-500 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em] text-black">{p.tag}</span>}
         <button
           onClick={(e) => { e.preventDefault(); toggleWish(p.id); }}

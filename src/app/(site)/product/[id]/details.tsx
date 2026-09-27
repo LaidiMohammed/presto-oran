@@ -18,6 +18,7 @@ export function ProductDetails({ id }: { id: string }) {
     <div className="mt-8 grid gap-10 lg:grid-cols-[1.1fr_1fr]">
       <div className="relative aspect-[4/4.2] overflow-hidden rounded-3xl border border-white/10">
         <Image src={p.image} alt={name} fill priority sizes="50vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         {p.tag && <span className="absolute start-5 top-5 bg-gold-500 px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-black">{p.tag}</span>}
         <span className="absolute bottom-5 end-5 rounded-full bg-black/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-gold-300 backdrop-blur">PRESTO · Oran</span>
       </div>
